@@ -1,37 +1,37 @@
 const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
+  process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: "/"
-        }
+          base: '/',
+        },
       }
     : {};
 
 module.exports = {
   ...routerBase,
   head: {
-    title: "NagayamaRyoga",
+    title: 'NagayamaRyoga',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: "description",
-        name: "description",
-        content: "NagayamaRyoga's web site."
-      }
-    ]
+        hid: 'description',
+        name: 'description',
+        content: "NagayamaRyoga's web site.",
+      },
+    ],
   },
-  modules: ["nuxt-fontawesome"],
+  modules: ['nuxt-fontawesome'],
   fontawesome: {
     imports: [
       {
-        set: "@fortawesome/free-brands-svg-icons",
-        icons: ["fab"]
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab'],
       },
       {
-        set: "@fortawesome/free-solid-svg-icons",
-        icons: ["fas"]
-      }
-    ]
-  }
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas'],
+      },
+    ],
+  },
 };

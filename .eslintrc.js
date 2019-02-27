@@ -17,8 +17,11 @@ module.exports = {
   ],
   rules: {
     'semi': [2, 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'quotes': ['error', 'single', {'avoidEscape': true}],
     'prettier/prettier': [
       'error',
+      {trailingComma: 'es5', singleQuote: true}
     ],
   },
 };

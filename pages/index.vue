@@ -26,7 +26,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/theme.scss";
+@import '~/assets/scss/theme.scss';
 
 .profile {
   position: relative;
@@ -37,7 +37,8 @@
   box-sizing: border-box;
   background: $base;
   border: solid 1px $accent;
-  border-radius: 4%;
+  border-radius: 1rem;
+  filter: drop-shadow(4px 4px 0px rgba($accent, 0.3));
 
   ul {
     list-style-type: none;
@@ -53,6 +54,7 @@
   width: $size;
   height: $size;
   border-radius: 10%;
+  filter: drop-shadow(2px 2px 0px rgba($accent, 0.3));
 }
 
 h1 {
@@ -70,8 +72,8 @@ h1 {
   a {
     $size: 32px;
     display: inline-block;
-    margin: $size * 0.2;
-    padding: $size * 0.6;
+    margin: 6px;
+    padding: 20px;
     width: $size;
     height: $size;
     line-height: $size;
@@ -88,6 +90,7 @@ h1 {
       background-color: $accent;
       transform: rotate(1turn);
       outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
   }
 }
