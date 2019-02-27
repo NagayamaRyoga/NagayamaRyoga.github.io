@@ -1,4 +1,14 @@
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        router: {
+          base: "/"
+        }
+      }
+    : {};
+
 module.exports = {
+  ...routerBase,
   head: {
     title: "NagayamaRyoga",
     meta: [
