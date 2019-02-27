@@ -1,0 +1,14 @@
+{
+  "name": "nagayamaryoga.github.io",
+  "version": "0.0.1",
+  "description": "NagayamaRyoga's web site.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NagayamaRyoga/NagayamaRyoga.github.io.git"
+  },
+  "author": "NagayamaRyoga",
+  "license": "MIT"
+}
