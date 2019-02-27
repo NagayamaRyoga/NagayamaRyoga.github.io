@@ -4,11 +4,15 @@
   "description": "NagayamaRyoga's web site.",
   "main": "index.js",
   "scripts": {
+    "dev": "nuxt"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:NagayamaRyoga/NagayamaRyoga.github.io.git"
   },
   "author": "NagayamaRyoga",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nuxt": "^2.4.5"
+  }
 }
