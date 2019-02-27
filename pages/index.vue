@@ -1,7 +1,7 @@
 <template lang="pug">
 .profile
   img.icon(src='https://github.com/NagayamaRyoga.png')
-  h1 NagayamaRyoga
+  h1 Nagayama Ryoga
 
   ul
     li
@@ -23,7 +23,7 @@
       font-awesome-icon(:icon="['fab', 'gitlab']")
     a(href='https://nagayamaryoga.github.io/study_meeting')
       font-awesome-icon(:icon="['fas', 'folder-open']")
-    a(:href='mailLinkAddress')
+    a(:href='mailLink')
       font-awesome-icon(:icon="['fas', 'envelope']")
 
   hr
@@ -55,7 +55,7 @@
 .profile {
   position: relative;
   margin: 1rem auto;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem;
   width: 20rem;
   text-align: center;
   box-sizing: border-box;
@@ -143,14 +143,20 @@ const mailAddress = 'bmFnYXlhbWExNUBzZWMuaXMua2l0LmFjLmpw';
 export default {
   data() {
     return {
-      mailLinkAddress: '#',
+      mailTo: '',
+      mailAddress: '',
     };
   },
 
+  computed: {
+    mailLink() {
+      return `${this.mailTo}: ${this.mailAddress}`;
+    },
+  },
+
   mounted() {
-    this.mailLinkAddress = process.client
-      ? `${window.atob(mailTo)}: ${window.atob(mailAddress)}`
-      : '#';
+    this.mailTo = process.client ? window.atob(mailTo) : '';
+    this.mailAddress = process.client ? window.atob(mailAddress) : '';
   },
 };
 </script>

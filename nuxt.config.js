@@ -10,14 +10,14 @@ const routerBase =
 module.exports = {
   ...routerBase,
   head: {
-    title: 'NagayamaRyoga',
+    title: 'Nagayama Ryoga',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: "NagayamaRyoga's web site.",
+        content: "Nagayama Ryoga's web site.",
       },
     ],
   },
