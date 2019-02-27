@@ -1,6 +1,6 @@
 <template lang="pug">
 .profile
-  img.icon(src="https://github.com/NagayamaRyoga.png")
+  img.icon(src='https://github.com/NagayamaRyoga.png')
   h1 NagayamaRyoga
 
   ul
@@ -23,6 +23,8 @@
       font-awesome-icon(:icon="['fab', 'gitlab']")
     a(href='https://nagayamaryoga.github.io/study_meeting')
       font-awesome-icon(:icon="['fas', 'folder-open']")
+    a(:href='mailLinkAddress')
+      font-awesome-icon(:icon="['fas', 'envelope']")
 </template>
 
 <style lang="scss" scoped>
@@ -72,8 +74,8 @@ h1 {
   a {
     $size: 32px;
     display: inline-block;
-    margin: 6px;
-    padding: 20px;
+    margin: 8px 12px;
+    padding: 20px 20px;
     width: $size;
     height: $size;
     line-height: $size;
@@ -97,5 +99,20 @@ h1 {
 </style>
 
 <script>
-export default {};
+const mailTo = 'bWFpbHRv';
+const mailAddress = 'bmFnYXlhbWExNUBzZWMuaXMua2l0LmFjLmpw';
+
+export default {
+  data() {
+    return {
+      mailLinkAddress: '#',
+    };
+  },
+
+  mounted() {
+    this.mailLinkAddress = process.client
+      ? `${window.atob(mailTo)}: ${window.atob(mailAddress)}`
+      : '#';
+  },
+};
 </script>
