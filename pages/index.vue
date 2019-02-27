@@ -12,7 +12,7 @@
       |  Kyoto Institute of Technology
     li
       font-awesome-icon(:icon="['fas', 'flask']")
-      |  Information Security
+      |  Information Security Lab
 
   hr
 
@@ -25,6 +25,28 @@
       font-awesome-icon(:icon="['fas', 'folder-open']")
     a(:href='mailLinkAddress')
       font-awesome-icon(:icon="['fas', 'envelope']")
+
+  hr
+
+  h2
+    font-awesome-icon(:icon="['fas', 'heart']")
+    |  Favorite
+  ul
+    li C++
+    li Dlang
+    li Rust
+    li Compiler
+
+  hr
+
+  h2
+    font-awesome-icon(:icon="['fas', 'wrench']")
+    |  Skills
+  ul
+    li LLVM
+    li Web frontend
+    li iOS application
+    li Digital watermarking
 </template>
 
 <style lang="scss" scoped>
@@ -41,12 +63,6 @@
   border: solid 1px $accent;
   border-radius: 1rem;
   filter: drop-shadow(4px 4px 0px rgba($accent, 0.3));
-
-  ul {
-    list-style-type: none;
-    padding-left: 0px;
-    color: $lighter;
-  }
 }
 
 .icon {
@@ -59,6 +75,17 @@
   filter: drop-shadow(2px 2px 0px rgba($accent, 0.3));
 }
 
+ul {
+  list-style-type: none;
+  margin: 0.5em 0;
+  padding-left: 0px;
+  color: $lighter;
+
+  li {
+    line-height: 200%;
+  }
+}
+
 h1 {
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
@@ -66,6 +93,17 @@ h1 {
   padding-block-end: 0.2em;
   font-size: 2em;
   font-weight: normal;
+  color: $accent;
+}
+
+h2 {
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+  padding-block-start: 0.1em;
+  padding-block-end: 0.1em;
+  font-size: 2em;
+  font-weight: normal;
+  color: $accent;
 }
 
 .links {

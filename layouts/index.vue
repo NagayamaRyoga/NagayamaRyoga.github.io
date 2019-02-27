@@ -21,6 +21,7 @@ html {
 }
 
 hr {
+  margin: 1.5em 0;
   height: 1px;
   background-color: $accent;
   border: none;
