@@ -1,6 +1,6 @@
 <template lang="pug">
 .profile
-  img.icon(src='https://github.com/NagayamaRyoga.png')
+  img.icon(src='https://github.com/NagayamaRyoga.png' alt)
   h1 Nagayama Ryoga
 
   ul
@@ -17,13 +17,13 @@
   hr
 
   .links
-    a(href='https://github.com/NagayamaRyoga')
+    a(title='GitHub' href='https://github.com/NagayamaRyoga')
       font-awesome-icon(:icon="['fab', 'github']")
-    a(href='https://git.sec.is.kit.ac.jp/nagayama15')
+    a(title='GitLab' href='https://git.sec.is.kit.ac.jp/nagayama15')
       font-awesome-icon(:icon="['fab', 'gitlab']")
-    a(href='https://nagayamaryoga.github.io/study_meeting')
+    a(title='Documents' href='https://nagayamaryoga.github.io/study_meeting')
       font-awesome-icon(:icon="['fas', 'folder-open']")
-    a(:href='mailLink')
+    a(title='E-mail' :href='mailLink')
       font-awesome-icon(:icon="['fas', 'envelope']")
 
   hr
@@ -58,11 +58,9 @@
   padding: 1.5rem 1rem;
   width: 20rem;
   text-align: center;
-  box-sizing: border-box;
   background: $base;
-  border: solid 1px $accent;
   border-radius: 1rem;
-  filter: drop-shadow(4px 4px 0px rgba($accent, 0.3));
+  filter: drop-shadow(6px 6px 0px rgba($accent, 0.3));
 }
 
 .icon {
@@ -72,7 +70,7 @@
   width: $size;
   height: $size;
   border-radius: 10%;
-  filter: drop-shadow(2px 2px 0px rgba($accent, 0.3));
+  filter: drop-shadow(3px 3px 0px rgba($accent, 0.3));
 }
 
 ul {
@@ -112,7 +110,7 @@ h2 {
   a {
     $size: 32px;
     display: inline-block;
-    margin: 8px 12px;
+    margin: 8px 20px;
     padding: 20px 20px;
     width: $size;
     height: $size;
