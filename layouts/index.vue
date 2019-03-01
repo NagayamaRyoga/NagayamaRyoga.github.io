@@ -7,12 +7,6 @@
 
 @import '~/assets/scss/theme.scss';
 
-html,
-body {
-  height: 100%;
-  margin: 0px;
-}
-
 html {
   color: $main;
   background-color: $background;
@@ -62,5 +56,18 @@ hr {
   height: 1px;
   background-color: $accent;
   border: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.2em 2em;
+  box-sizing: border-box;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  color: $accent;
+  background: $base;
+  border: solid 1px $accent;
+  border-radius: 1em;
 }
 </style>

@@ -6,8 +6,7 @@ article
     h1
       nuxt-link(:to='uri') {{title}}
     Tags(:tags='tags')
-  .body
-    slot
+  slot
 </template>
 
 <style lang="scss" scoped>
@@ -17,6 +16,7 @@ article {
   margin: 2em 1em;
   padding: 1em 2em;
   background: $base;
+  font-weight: 300;
   filter: drop-shadow(6px 6px 0px $shadow);
 }
 
@@ -40,10 +40,6 @@ article {
       text-decoration: none;
     }
   }
-}
-
-.body {
-  font-weight: 300;
 }
 </style>
 

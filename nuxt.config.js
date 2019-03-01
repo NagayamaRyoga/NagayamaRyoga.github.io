@@ -1,3 +1,5 @@
+import { sourceFileArray } from './static/posts/summary.json';
+
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
@@ -6,6 +8,10 @@ const routerBase =
         },
       }
     : {};
+
+const dynamicRoutes = sourceFileArray.map(x =>
+  x.replace(/^\.\/posts\/(.+)\.md$/, '/posts/$1')
+);
 
 module.exports = {
   ...routerBase,
@@ -22,6 +28,9 @@ module.exports = {
     ],
   },
   modules: ['nuxt-fontawesome'],
+  generate: {
+    routes: [...dynamicRoutes],
+  },
   fontawesome: {
     imports: [
       {

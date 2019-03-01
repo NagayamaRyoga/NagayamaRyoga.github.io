@@ -1,6 +1,9 @@
 <template lang="pug">
-Article(:article='article')
-  .content(v-html='article.bodyHtml')
+main
+  Article(:article='article')
+    .body
+      .content(v-html='article.bodyHtml')
+    .footer
 </template>
 
 <style lang="scss" scoped>

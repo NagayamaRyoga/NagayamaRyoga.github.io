@@ -1,7 +1,9 @@
 <template lang="pug">
 Article(:article='article')
-  p.preview {{preview}}
-  nuxt-link.button(:to='uri') 続きを読む
+  .body
+    p.preview {{preview}}
+  .footer
+    nuxt-link.button(:to='uri') 続きを読む
 </template>
 
 <style lang="scss" scoped>
@@ -13,19 +15,8 @@ Article(:article='article')
   }
 }
 
-.button {
-  display: block;
-  margin: 0em auto;
-  padding: 0.2em 2em;
-  width: 10em;
-  box-sizing: border-box;
-  font-weight: bolder;
+.footer {
   text-align: center;
-  text-decoration: none;
-  color: $accent;
-  background: $base;
-  border: solid 1px $accent;
-  border-radius: 1em;
 }
 </style>
 
