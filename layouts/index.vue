@@ -47,6 +47,16 @@ h2 {
   color: $accent;
 }
 
+h3 {
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+  padding-block-start: 0.1em;
+  padding-block-end: 0.1em;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: $accent;
+}
+
 hr {
   margin: 1.5em 0;
   height: 1px;
