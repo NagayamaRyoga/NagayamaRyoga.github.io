@@ -7,7 +7,8 @@
     "dev": "nuxt",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "build:posts": "processmd \"./static/posts/**/*.md\" --outputDir \"./static/posts\" --summaryOutput \"./static/posts/summary.json\" --preview 120",
+    "build:gh-pages": "npm run build:posts && cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy:gh-pages": "npm run build:gh-pages && gh-pages -b master -t -d dist"
   },
   "husky": {
@@ -41,6 +42,7 @@
     "husky": "^1.3.1",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
+    "processmd": "^4.4.2",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0"
