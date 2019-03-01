@@ -1,5 +1,5 @@
 <template lang="pug">
-.profile
+main.profile
   img.icon(src='https://github.com/NagayamaRyoga.png' alt)
   h1 Nagayama Ryoga
 
@@ -56,7 +56,7 @@
   text-align: center;
   background: $base;
   border-radius: 1rem;
-  filter: drop-shadow(6px 6px 0px rgba($accent, 0.3));
+  filter: drop-shadow(6px 6px 0px $shadow);
 }
 
 .icon {
@@ -66,7 +66,7 @@
   width: $size;
   height: $size;
   border-radius: 10%;
-  filter: drop-shadow(3px 3px 0px rgba($accent, 0.3));
+  filter: drop-shadow(3px 3px 0px $shadow);
 }
 
 ul {

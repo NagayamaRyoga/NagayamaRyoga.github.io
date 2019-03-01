@@ -3,7 +3,7 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,500');
 
 @import '~/assets/scss/theme.scss';
 
@@ -18,6 +18,13 @@ html {
   background-color: $background;
   font-size: 16px;
   font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+}
+
+main {
+  margin: 0 auto;
+  min-width: 20rem;
+  max-width: 40rem;
 }
 
 h1 {

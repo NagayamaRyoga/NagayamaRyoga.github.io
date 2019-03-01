@@ -14,6 +14,7 @@ a {
   height: 1em;
   line-height: 1em;
   font-size: 1em;
+  text-decoration: none;
   color: $base;
   background: $main;
   border-radius: 50%;
