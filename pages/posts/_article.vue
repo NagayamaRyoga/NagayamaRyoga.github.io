@@ -19,10 +19,20 @@
 
 .content {
   h1,
-  h2,
-  h3 {
+  h2 {
+    margin: 1em 0em;
+    font-weight: 500;
     border-block-end: solid 1px $accent;
-    font-weight: bolder;
+  }
+
+  h3 {
+    margin-block-start: 1.6em;
+    margin-block-end: 0.8em;
+    font-weight: 300;
+  }
+
+  a {
+    color: $accent;
   }
 }
 </style>

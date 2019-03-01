@@ -44,6 +44,7 @@ header
   padding: 0.2em 0em;
   font-size: 1.2em;
   font-weight: 100;
+  text-align: right;
 
   li {
     display: inline-block;
@@ -53,6 +54,16 @@ header
   a {
     color: $accent;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 442px) {
+  .site-title {
+    font-size: 1.2em;
+  }
+
+  .links {
+    font-size: 0.8em;
   }
 }
 </style>
