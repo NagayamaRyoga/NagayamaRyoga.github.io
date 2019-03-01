@@ -1,14 +1,14 @@
 <template lang="pug">
 .wrapper
   main
-    Preview(v-for='article in articles' :article='article')
+    Preview(v-for='article in articles' :article='article' :key='`${article.dir}/${article.base}`')
 </template>
 
 <style lang="scss" scoped></style>
 
 <script>
 import Preview from '~/components/posts/preview';
-import Summary from '~/static/posts/summary.json';
+import { fileMap as articles } from '~/static/posts/summary.json';
 
 export default {
   components: {
@@ -20,8 +20,8 @@ export default {
     };
   },
   mounted() {
-    this.articles = Object.values(Summary.fileMap).sort(
-      (a, b) => a.publishedAt - b.publishedAt
+    this.articles = Object.values(articles).sort(
+      (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
     );
   },
 };

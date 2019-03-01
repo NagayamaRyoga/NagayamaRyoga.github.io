@@ -5,12 +5,8 @@ article
       nuxt-link(:to='uri') {{publishedAt}}
     h1
       nuxt-link(:to='uri') {{title}}
-    ul.tags
-      li(v-for='tag in article.tags')
-        nuxt-link(:to='`?tag=${tag}`')
-          font-awesome-icon(:icon='["fas", "tag"]')
-          |  {{tag}}
-  .body {{article.preview}}
+    Tags(:tags='tags')
+  .body {{preview}}
   .footer
     nuxt-link.button(:to='uri') 続きを読む
 </template>
@@ -40,26 +36,6 @@ article {
     padding: 0em;
     font-weight: 100;
     border-block-end: solid 1px $accent;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-
-  .tags {
-    display: block;
-    list-style-type: none;
-    margin: 0.4em 0em;
-    padding: 0em;
-    font-size: 0.8em;
-
-    li {
-      display: inline-block;
-      margin-right: 1em;
-      color: $accent;
-      font-weight: bolder;
-    }
 
     a {
       color: inherit;
@@ -96,7 +72,12 @@ article {
 </style>
 
 <script>
+import Tags from '~/components/posts/tags';
+
 export default {
+  components: {
+    Tags,
+  },
   props: {
     article: {
       type: Object,
@@ -107,12 +88,19 @@ export default {
     title() {
       return this.article.title;
     },
+    tags() {
+      return this.article.tags;
+    },
+    preview() {
+      return this.article.preview;
+    },
     publishedAt() {
       const date = new Date(this.article.publishedAt);
       return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     },
     uri() {
-      return this.article.base.replace(/\.json$/, '');
+      const name = this.article.base.replace(/\.json$/, '');
+      return `/posts/${name}`;
     },
   },
 };
