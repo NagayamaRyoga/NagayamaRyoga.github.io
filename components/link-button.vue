@@ -1,5 +1,5 @@
 <template lang="pug">
-a(:title='title' :href='linkTo')
+Link(:title='title' :to='to')
   font-awesome-icon(:icon='icon')
 </template>
 
@@ -33,16 +33,21 @@ a {
 </style>
 
 <script>
+import Link from '~/components/better-link';
+
 export default {
+  components: {
+    Link,
+  },
   props: {
+    to: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: false,
       default: '',
-    },
-    linkTo: {
-      type: String,
-      required: true,
     },
     icon: {
       type: [Object, Array, String],

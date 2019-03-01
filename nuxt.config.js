@@ -17,13 +17,55 @@ module.exports = {
   ...routerBase,
   head: {
     title: 'Nagayama Ryoga',
+    htmlAttrs: {
+      lang: 'ja',
+    },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'viewport',
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
       {
         hid: 'description',
         name: 'description',
         content: "Nagayama Ryoga's web site.",
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'NagayamaRyoga',
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://nagayamaryoga.github.io/',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'NagayamaRyoga',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://github.com/NagayamaRyoga.png',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: "Nagayama Ryoga's web site.",
+      },
+      {
+        hid: 'og:locale',
+        name: 'og:locale',
+        content: 'ja_JP',
       },
     ],
   },

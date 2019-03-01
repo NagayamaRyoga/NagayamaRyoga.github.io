@@ -7,6 +7,12 @@
 
 @import '~/assets/scss/theme.scss';
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   color: $main;
   background-color: $background;
@@ -15,8 +21,11 @@ html {
   font-weight: 300;
 }
 
-main {
+main,
+header,
+footer {
   margin: 0 auto;
+  padding: 0em 1em;
   min-width: 20rem;
   max-width: 40rem;
 }

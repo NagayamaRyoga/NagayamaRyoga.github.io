@@ -13,7 +13,7 @@ article
 @import '~/assets/scss/theme.scss';
 
 article {
-  margin: 2em 1em;
+  margin: 1em 0em;
   padding: 1em 2em;
   background: $base;
   font-weight: 300;
