@@ -80,26 +80,6 @@ ul {
   }
 }
 
-h1 {
-  margin-block-start: 0.2em;
-  margin-block-end: 0.2em;
-  padding-block-start: 0.2em;
-  padding-block-end: 0.2em;
-  font-size: 2em;
-  font-weight: normal;
-  color: $accent;
-}
-
-h2 {
-  margin-block-start: 0.1em;
-  margin-block-end: 0.1em;
-  padding-block-start: 0.1em;
-  padding-block-end: 0.1em;
-  font-size: 2em;
-  font-weight: normal;
-  color: $accent;
-}
-
 .links {
   padding: 0 1em;
   text-align: center;
