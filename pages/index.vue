@@ -5,26 +5,22 @@
 
   ul
     li
-      font-awesome-icon(:icon="['fas', 'map-marker-alt']")
+      font-awesome-icon(:icon='["fas", "map-marker-alt"]')
       |  Kyoto, Japan
     li
-      font-awesome-icon(:icon="['fas', 'university']")
+      font-awesome-icon(:icon='["fas", "university"]')
       |  Kyoto Institute of Technology
     li
-      font-awesome-icon(:icon="['fas', 'flask']")
+      font-awesome-icon(:icon='["fas", "flask"]')
       |  Information Security Lab
 
   hr
 
   .links
-    a(title='GitHub' href='https://github.com/NagayamaRyoga')
-      font-awesome-icon(:icon="['fab', 'github']")
-    a(title='GitLab' href='https://git.sec.is.kit.ac.jp/nagayama15')
-      font-awesome-icon(:icon="['fab', 'gitlab']")
-    a(title='Documents' href='https://nagayamaryoga.github.io/study_meeting')
-      font-awesome-icon(:icon="['fas', 'folder-open']")
-    a(title='E-mail' :href='mailLink')
-      font-awesome-icon(:icon="['fas', 'envelope']")
+    LinkButton.link(title='GitHub' linkTo='https://github.com/NagayamaRyoga' :icon='["fab", "github"]')
+    LinkButton.link(title='GitLab' linkTo='https://git.sec.is.kit.ac.jp/nagayama15' :icon='["fab", "gitlab"]')
+    LinkButton.link(title='Documents' linkTo='https://github.com/NagayamaRyoga' :icon='["fas", "folder-open"]')
+    LinkButton.link(title='E-mail' :linkTo='mailLink' :icon='["fas", "envelope"]')
 
   hr
 
@@ -105,40 +101,28 @@ h2 {
 }
 
 .links {
+  padding: 0 1em;
   text-align: center;
+  font-size: 2em;
 
-  a {
-    $size: 32px;
-    display: inline-block;
-    margin: 8px 20px;
-    padding: 20px 20px;
-    width: $size;
-    height: $size;
-    line-height: $size;
-    font-size: $size;
-    color: $base;
-    background: $main;
-    border-radius: 50%;
-    transform: rotate(0turn);
-    transition: all 0.4s ease;
-
-    &:active,
-    &:hover,
-    &:focus {
-      background-color: $accent;
-      transform: rotate(1turn);
-      outline: none;
-      -webkit-tap-highlight-color: transparent;
-    }
+  .link {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   }
 }
 </style>
 
 <script>
+import LinkButton from '~/components/link-button';
+
 const mailTo = 'bWFpbHRv';
 const mailAddress = 'bmFnYXlhbWExNUBzZWMuaXMua2l0LmFjLmpw';
 
 export default {
+  components: {
+    LinkButton,
+  },
+
   data() {
     return {
       mailTo: '',
@@ -153,8 +137,10 @@ export default {
   },
 
   mounted() {
-    this.mailTo = process.client ? window.atob(mailTo) : '';
-    this.mailAddress = process.client ? window.atob(mailAddress) : '';
+    if (process.client) {
+      this.mailTo = window.atob(mailTo);
+      this.mailAddress = window.atob(mailAddress);
+    }
   },
 };
 </script>
