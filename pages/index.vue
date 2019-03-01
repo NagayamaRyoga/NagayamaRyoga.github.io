@@ -19,6 +19,7 @@ main.profile
   .links
     LinkButton.link(title='GitHub' linkTo='https://github.com/NagayamaRyoga' :icon='["fab", "github"]')
     LinkButton.link(title='GitLab' linkTo='https://git.sec.is.kit.ac.jp/nagayama15' :icon='["fab", "gitlab"]')
+    LinkButton.link(title='Blog' linkTo='/posts' :icon='["fas", "book-open"]')
     LinkButton.link(title='Documents' linkTo='https://github.com/NagayamaRyoga' :icon='["fas", "folder-open"]')
     LinkButton.link(title='E-mail' :linkTo='mailLink' :icon='["fas", "envelope"]')
 
@@ -81,14 +82,9 @@ ul {
 }
 
 .links {
-  padding: 0 1em;
+  padding: 0 0.5em;
   text-align: center;
   font-size: 2em;
-
-  .link {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-  }
 }
 </style>
 

@@ -18,7 +18,7 @@ article {
   margin: 2em 1em;
   padding: 1em 2em;
   background: $base;
-  filter: drop-shadow(4px 4px 0px $shadow);
+  filter: drop-shadow(6px 6px 0px $shadow);
 }
 
 .header {
