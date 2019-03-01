@@ -73,7 +73,7 @@ ul {
   list-style-type: none;
   margin: 0.5em 0;
   padding-left: 0px;
-  color: $lighter;
+  color: $main;
 
   li {
     line-height: 200%;

@@ -45,6 +45,5 @@ hr {
   height: 1px;
   background-color: $accent;
   border: none;
-  filter: drop-shadow(1px 1px 0px rgba($accent, 0.3));
 }
 </style>
