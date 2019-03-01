@@ -50,25 +50,32 @@ export default {
     title() {
       return this.article.title;
     },
+    preview() {
+      return this.article.preview;
+    },
   },
   async asyncData({ params }) {
     const article = require(`~/static/posts/${params.article}.json`);
 
     return {
       article,
-      base: params.article,
+      name: params.article,
     };
   },
   head() {
     return {
-      title: `有限猿定理 - ${this.title}`,
+      title: `${this.title} - 有限猿定理`,
       meta: [
         {
           hid: 'keywords',
           name: 'keywords',
           content: 'ブログ blog 有限猿定理',
         },
-        { hid: 'description', name: 'description', content: `${this.title}` },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.title} ${this.preview} ……`,
+        },
         {
           hid: 'og:title',
           name: 'og:title',
@@ -78,13 +85,13 @@ export default {
         {
           hid: 'og:url',
           name: 'og:url',
-          content: `https://nagayamaryoga.github.io/posts/${this.base}/`,
+          content: `https://nagayamaryoga.github.io/posts/${this.name}/`,
         },
         { hid: 'og:site_name', name: 'og:site_name', content: '有限猿定理' },
         {
           hid: 'og:description',
           name: 'og:description',
-          content: `${this.title}`,
+          content: `${this.title} ${this.preview} ……`,
         },
       ],
     };
