@@ -60,6 +60,13 @@ h3 {
   color: $accent;
 }
 
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+  font-family: Consolas, monospace;
+  background: rgba(24, 28, 31, 0.08);
+}
+
 hr {
   margin: 1.5em 0;
   height: 1px;

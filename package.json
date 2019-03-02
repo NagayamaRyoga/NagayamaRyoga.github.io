@@ -7,7 +7,7 @@
     "dev": "nuxt",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "build:posts": "processmd \"./posts/**/*.md\" --outputDir \"./static/posts\" --summaryOutput \"./static/posts/summary.json\" --preview 160",
+    "build:posts": "processmd \"./posts/**/*.md\" --outputDir \"./static/posts\" --summaryOutput \"./static/posts/summary.json\" --preview 140 --previewDelimiter \"。\"",
     "build:gh-pages": "npm run build:posts && cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy:gh-pages": "npm run build:gh-pages && gh-pages -b master -t -d dist"
   },
