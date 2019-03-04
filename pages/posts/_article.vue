@@ -32,6 +32,8 @@ export default {
     };
   },
   head() {
+    const preview = this.article.preview.replace(/\n/g, ' ');
+
     return {
       title: `${this.article.title} - 有限猿定理`,
       meta: [
@@ -43,7 +45,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: `${this.article.title} ${this.article.preview} ……`,
+          content: `${this.article.title} ${preview} ……`,
         },
         {
           hid: 'og:title',
@@ -60,7 +62,7 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: `${this.article.title} ${this.article.preview} ……`,
+          content: `${this.article.title} ${preview} ……`,
         },
       ],
     };
