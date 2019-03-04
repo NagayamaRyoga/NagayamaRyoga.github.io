@@ -1,4 +1,4 @@
-import { sourceFileArray } from './static/posts/summary.json';
+import { sourceFileArray, fileMap } from './static/posts/summary.json';
 
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
@@ -9,9 +9,15 @@ const routerBase =
       }
     : {};
 
-const dynamicRoutes = sourceFileArray.map(x =>
+const postRoutes = sourceFileArray.map(x =>
   x.replace(/^\.\/posts\/(.+)\.md$/, '/posts/$1')
 );
+
+const tagRoutes = Object.values(fileMap)
+  .reduce((a, b) => [...a, ...b.tags], [])
+  .filter((x, i, a) => a.slice(0, i).indexOf(x) === -1);
+
+const dynamicRoutes = [...postRoutes, ...tagRoutes];
 
 module.exports = {
   ...routerBase,

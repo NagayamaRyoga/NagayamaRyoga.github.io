@@ -1,9 +1,7 @@
 <template lang="pug">
 ul.tags
   li(v-for='tag in tags' :key='tag')
-    nuxt-link(:to='`/posts?tag=${encodeURIComponent(tag)}`')
-      font-awesome-icon(:icon='["fas", "tag"]')
-      |  {{tag}}
+    Tag(:tag='tag')
 </template>
 
 <style lang="scss" scoped>
@@ -31,7 +29,12 @@ ul.tags
 </style>
 
 <script>
+import Tag from '~/components/posts/tag';
+
 export default {
+  components: {
+    Tag,
+  },
   props: {
     tags: {
       type: Array,
