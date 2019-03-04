@@ -14,29 +14,6 @@
 }
 </style>
 
-<style lang="scss">
-@import '~/assets/scss/theme.scss';
-
-.content {
-  h1,
-  h2 {
-    margin: 1em 0em;
-    font-weight: 500;
-    border-block-end: solid 1px $accent;
-  }
-
-  h3 {
-    margin-block-start: 1.6em;
-    margin-block-end: 0.8em;
-    font-weight: 300;
-  }
-
-  a {
-    color: $accent;
-  }
-}
-</style>
-
 <script>
 import Header from '~/components/posts/header';
 import Article from '~/components/posts/article';

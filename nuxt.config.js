@@ -69,6 +69,7 @@ module.exports = {
       },
     ],
   },
+  css: ['~/assets/scss/global.scss'],
   modules: ['nuxt-fontawesome'],
   generate: {
     routes: [...dynamicRoutes],

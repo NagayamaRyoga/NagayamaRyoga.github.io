@@ -1,7 +1,7 @@
 <template lang="pug">
 ul.tags
   li(v-for='tag in tags' :key='tag')
-    nuxt-link(:to='`/posts?tag=${tag}`')
+    nuxt-link(:to='`/posts?tag=${encodeURIComponent(tag)}`')
       font-awesome-icon(:icon='["fas", "tag"]')
       |  {{tag}}
 </template>
