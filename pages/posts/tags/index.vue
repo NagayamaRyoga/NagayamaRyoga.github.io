@@ -38,5 +38,35 @@ export default {
       tags,
     };
   },
+  head() {
+    return {
+      title: 'タグ一覧 - 有限猿定理',
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'ブログ blog 有限猿定理',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: '技術記事がメインのブログ',
+        },
+        { hid: 'og:title', name: 'og:title', content: 'タグ一覧 - 無限猿定理' },
+        { hid: 'og:type', name: 'og:type', content: 'website' },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://nagayamaryoga.github.io/posts/',
+        },
+        { hid: 'og:site_name', name: 'og:site_name', content: '有限猿定理' },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: '技術記事がメインのブログ',
+        },
+      ],
+    };
+  },
 };
 </script>

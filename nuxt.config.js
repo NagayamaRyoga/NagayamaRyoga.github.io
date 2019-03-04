@@ -15,7 +15,8 @@ const postRoutes = sourceFileArray.map(x =>
 
 const tagRoutes = Object.values(fileMap)
   .reduce((a, b) => [...a, ...b.tags], [])
-  .filter((x, i, a) => a.slice(0, i).indexOf(x) === -1);
+  .filter((x, i, a) => a.slice(0, i).indexOf(x) === -1)
+  .map(x => `/posts/tags/${x}`);
 
 const dynamicRoutes = [...postRoutes, ...tagRoutes];
 
