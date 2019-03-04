@@ -6,6 +6,7 @@
       .body
         .content(v-html='article.bodyHtml')
       .footer
+        TwitterShareButton
 </template>
 
 <style lang="scss" scoped>
@@ -17,12 +18,14 @@
 <script>
 import Header from '~/components/posts/header';
 import Article from '~/components/posts/article';
+import TwitterShareButton from '~/components/twitter-share-button';
 import { getArticle } from '~/assets/js/posts/article';
 
 export default {
   components: {
     Header,
     Article,
+    TwitterShareButton,
   },
   async asyncData({ params }) {
     const article = await getArticle(params.article);
