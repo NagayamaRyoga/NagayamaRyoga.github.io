@@ -33,7 +33,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.title} - 有限猿定理`,
+      title: `${this.article.title} - 有限猿定理`,
       meta: [
         {
           hid: 'keywords',
@@ -43,18 +43,18 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: `${this.title} ${this.preview} ……`,
+          content: `${this.article.title} ${this.article.preview} ……`,
         },
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `無限猿定理 - ${this.title}`,
+          content: `無限猿定理 - ${this.article.title}`,
         },
         { hid: 'og:type', name: 'og:type', content: 'article' },
         {
           hid: 'og:url',
           name: 'og:url',
-          content: `https://nagayamaryoga.github.io/posts/${this.name}/`,
+          content: `https://nagayamaryoga.github.io/posts/${this.article.id}/`,
         },
         { hid: 'og:site_name', name: 'og:site_name', content: '有限猿定理' },
         {

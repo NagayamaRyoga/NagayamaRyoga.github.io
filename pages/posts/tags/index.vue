@@ -57,7 +57,7 @@ export default {
         {
           hid: 'og:url',
           name: 'og:url',
-          content: 'https://nagayamaryoga.github.io/posts/',
+          content: 'https://nagayamaryoga.github.io/posts/tags/',
         },
         { hid: 'og:site_name', name: 'og:site_name', content: '有限猿定理' },
         {

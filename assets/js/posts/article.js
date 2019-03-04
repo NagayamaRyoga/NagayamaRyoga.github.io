@@ -5,6 +5,7 @@ export async function getArticle(id) {
     title: article.title,
     publishedAt: new Date(article.publishedAt),
     tags: article.tags,
+    preview: article.preview,
     bodyHtml: article.bodyHtml,
     id,
     uri: `/posts/${id}`,
