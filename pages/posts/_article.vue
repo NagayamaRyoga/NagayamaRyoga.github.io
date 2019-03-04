@@ -60,7 +60,7 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: `${this.title} ${this.preview} ……`,
+          content: `${this.article.title} ${this.article.preview} ……`,
         },
       ],
     };
