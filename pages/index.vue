@@ -20,7 +20,7 @@ main.profile
     LinkButton.link(title='GitHub' to='https://github.com/NagayamaRyoga' :icon='["fab", "github"]')
     LinkButton.link(title='GitLab' to='https://git.sec.is.kit.ac.jp/nagayama15' :icon='["fab", "gitlab"]')
     LinkButton.link(title='Blog' to='/posts' :icon='["fas", "book-open"]')
-    LinkButton.link(title='Documents' to='https://github.com/NagayamaRyoga' :icon='["fas", "folder-open"]')
+    LinkButton.link(title='Documents' to='https://nagayamaryoga.github.io/study_meeting' :icon='["fas", "folder-open"]')
     LinkButton.link(title='E-mail' :to='mailLink' :icon='["fas", "envelope"]')
 
   hr
