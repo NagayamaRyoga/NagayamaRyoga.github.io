@@ -1,7 +1,7 @@
 <template lang="pug">
 Article(:article='article')
   .body
-    p.preview {{article.preview}}
+    p.content {{article.preview}}
   .footer
     nuxt-link.button(:to='article.uri') 続きを読む
 </template>
@@ -9,7 +9,7 @@ Article(:article='article')
 <style lang="scss" scoped>
 @import '~/assets/scss/theme.scss';
 
-.preview {
+.content {
   &::after {
     content: ' ……';
   }

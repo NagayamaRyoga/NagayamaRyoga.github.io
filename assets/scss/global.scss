@@ -83,17 +83,20 @@ hr {
 }
 
 .content {
+  font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
+  font-weight: 500;
+
   h1,
   h2 {
     margin: 1em 0em;
-    font-weight: 500;
+    font-weight: normal;
     border-block-end: solid 1px $accent;
   }
 
   h3 {
     margin-block-start: 1.6em;
     margin-block-end: 0.8em;
-    font-weight: 300;
+    font-weight: normal;
   }
 
   a {
