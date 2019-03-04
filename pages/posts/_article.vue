@@ -17,26 +17,18 @@
 <script>
 import Header from '~/components/posts/header';
 import Article from '~/components/posts/article';
+import { getArticle } from '~/assets/js/posts/article';
 
 export default {
   components: {
     Header,
     Article,
   },
-  computed: {
-    title() {
-      return this.article.title;
-    },
-    preview() {
-      return this.article.preview;
-    },
-  },
   async asyncData({ params }) {
-    const article = require(`~/static/posts/${params.article}.json`);
+    const article = await getArticle(params.article);
 
     return {
       article,
-      name: params.article,
     };
   },
   head() {

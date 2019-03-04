@@ -2,10 +2,10 @@
 article
   .header
     .date
-      nuxt-link(:to='uri') {{publishedAt}}
+      nuxt-link(:to='article.uri') {{date}}
     h1
-      nuxt-link(:to='uri') {{title}}
-    Tags(:tags='tags')
+      nuxt-link(:to='article.uri') {{article.title}}
+    Tags(:tags='article.tags')
   slot
 </template>
 
@@ -57,19 +57,9 @@ export default {
     },
   },
   computed: {
-    title() {
-      return this.article.title;
-    },
-    tags() {
-      return this.article.tags;
-    },
-    publishedAt() {
+    date() {
       const date = new Date(this.article.publishedAt);
       return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-    },
-    uri() {
-      const name = this.article.base.replace(/\.json$/, '');
-      return `/posts/${name}`;
     },
   },
 };

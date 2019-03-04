@@ -2,25 +2,21 @@
 .wrapper
   Header
   main
-    Preview(v-for='article in articles' :article='article' :key='`${article.dir}/${article.base}`')
+    Preview(v-for='article in articles' :article='article' :key='article.uri')
 </template>
-
-<style lang="scss" scoped></style>
 
 <script>
 import Header from '~/components/posts/header';
 import Preview from '~/components/posts/preview';
-import { fileMap } from '~/static/posts/summary.json';
+import { getSummary } from '~/assets/js/posts/summary';
 
 export default {
   components: {
     Header,
     Preview,
   },
-  data() {
-    const articles = Object.values(fileMap).sort(
-      (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
-    );
+  async asyncData() {
+    const articles = await getSummary();
 
     return {
       articles,

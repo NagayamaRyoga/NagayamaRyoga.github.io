@@ -1,9 +1,9 @@
 <template lang="pug">
 Article(:article='article')
   .body
-    p.preview {{preview}}
+    p.preview {{article.preview}}
   .footer
-    nuxt-link.button(:to='uri') 続きを読む
+    nuxt-link.button(:to='article.uri') 続きを読む
 </template>
 
 <style lang="scss" scoped>
@@ -31,15 +31,6 @@ export default {
     article: {
       type: Object,
       required: true,
-    },
-  },
-  computed: {
-    preview() {
-      return this.article.preview;
-    },
-    uri() {
-      const name = this.article.base.replace(/\.json$/, '');
-      return `/posts/${name}`;
     },
   },
 };
