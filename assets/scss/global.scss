@@ -53,11 +53,26 @@ h3 {
   color: $accent;
 }
 
+strong {
+  color: $accent;
+}
+
 code {
   padding: 0.2em 0.4em;
   font-size: 0.9em;
-  font-family: Consolas, monospace;
-  background: rgba(24, 28, 31, 0.08);
+  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-weight: 500;
+  background: #e8e8e8;
+}
+
+pre {
+  padding: 0.5em 0.8em;
+  background: #e8e8e8;
+  overflow: auto;
+
+  code {
+    background: none;
+  }
 }
 
 hr {
@@ -99,5 +114,26 @@ hr {
 
   a {
     color: $accent;
+  }
+}
+
+.hljs {
+  .hljs-comment {
+    color: #0f990f;
+  }
+  .hljs-string {
+    color: #ff7300;
+  }
+  .hljs-name {
+    color: #1c50df;
+  }
+  .hljs-keyword {
+    color: #1c50df;
+  }
+  .hljs-number {
+    color: #658116;
+  }
+  .hljs-meta {
+    color: #808080;
   }
 }
