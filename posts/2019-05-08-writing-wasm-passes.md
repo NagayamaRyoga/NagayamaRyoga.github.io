@@ -268,7 +268,7 @@ pass_runner.run();
 
 ### 2.3. 式木訪問器(Visitor)を実装する
 
-モジュールに含まれる定数命令の数を数えるには式木訪問器(Visitor)を作成するのが最も簡単です。
+モジュールに含まれる定数命令の数を数えるには式木訪問器(Visitor)を作成するのがもっとも簡単です。
 
 #### main.cpp [(6行目-187行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/main.cpp#L6-L187)
 

@@ -37,7 +37,7 @@
   "devDependencies": {
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^1.0.1",
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-loader": "^2.1.2",
@@ -46,14 +46,14 @@
     "gh-pages": "^2.0.1",
     "husky": "^1.3.1",
     "node-sass": "^4.12.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.2",
     "processmd": "^4.4.2",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "textlint": "^11.2.5",
     "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-ja-hiragana-fukushi": "^1.0.3",
+    "textlint-rule-ja-hiragana-fukushi": "^1.1.0",
     "textlint-rule-ja-hiragana-hojodoushi": "^1.0.4",
     "textlint-rule-ja-hiragana-keishikimeishi": "^1.0.2",
     "textlint-rule-ja-no-abusage": "^1.2.2",
@@ -73,6 +73,6 @@
     "textlint-rule-no-mix-dearu-desumasu": "^4.0.0",
     "textlint-rule-no-nfd": "^1.0.1",
     "textlint-rule-preset-jtf-style": "^2.3.3",
-    "textlint-rule-prh": "^5.2.0"
+    "textlint-rule-prh": "^5.2.1"
   }
 }
