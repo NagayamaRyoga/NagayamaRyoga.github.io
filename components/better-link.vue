@@ -1,5 +1,5 @@
 <template lang="pug">
-a(v-if='/^https?:/.test(to)' :href='to' :title='title')
+a(v-if='/:/.test(to)' :href='to' :title='title')
   slot
 nuxt-link(v-else :to='to' :title='title')
   slot
