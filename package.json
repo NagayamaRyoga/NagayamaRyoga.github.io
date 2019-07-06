@@ -16,7 +16,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint",
+      "pre-push": "if [ `git name-rev --name-only HEAD` = develop ]; then npm run deploy:gh-pages; fi"
     }
   },
   "repository": {
