@@ -62,7 +62,7 @@ $ count-const simple.wast
 
 プロジェクトはCMakeを用いてビルドするため、[CMakeLists.txt](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/master/CMakeLists.txt)を記述する必要があります。
 
-#### CMakeLists.txt [(1行目-13行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/CMakeLists.txt#L1-L13)
+#### CMakeLists.txt [(1行目-13行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/CMakeLists.txt#L1-L13)
 
 ```cmake
 cmake_minimum_required(VERSION 3.0.0)
@@ -87,7 +87,7 @@ endif (NOT CMAKE_BUILD_TYPE)
 
 CMakeのプラグインであるExternalProjectを用いてBinaryenをインポートします。また、`pthread`をリンクする必要があるのでそのための準備も行います。
 
-#### CMakeLists.txt [(15行目-28行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/CMakeLists.txt#L15-L28)
+#### CMakeLists.txt [(15行目-28行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/CMakeLists.txt#L15-L28)
 
 ```cmake
 # 環境ごとのThreadライブラリを見つける
@@ -120,7 +120,7 @@ Binaryenは2019年5月現在も盛んに更新がなされているので使用�
 
 そのため、`IMPORTED`ターゲットを作成する作成する必要があります。
 
-#### CMakeLists.txt [(30行目-55行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/CMakeLists.txt#L30-L55)
+#### CMakeLists.txt [(30行目-55行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/CMakeLists.txt#L30-L55)
 
 ```cmake
 # 展開されたBinaryenのソースパス、バイナリパスを取得する
@@ -166,7 +166,7 @@ set_target_properties(binaryen::binaryen
 
 最後にカスタムパスをビルドするためにターゲットを追加します。
 
-#### CMakeLists.txt [(57行目-63行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/CMakeLists.txt#L57-L63)
+#### CMakeLists.txt [(57行目-63行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/CMakeLists.txt#L57-L63)
 
 
 ```cmake
@@ -191,7 +191,7 @@ target_link_libraries(count-const
 
 コマンドライン引数で指定されたWebAssemblyファイルを読み込みます。
 
-#### main.cpp [(219行目-221行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/main.cpp#L219-L221)
+#### main.cpp [(223行目-225行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L223-L225)
 
 ```cpp
 // WebAssemblyモジュールを読み込む
@@ -233,7 +233,7 @@ WebAssemblyモジュールファイルを読み込むには、以下の関数の
 
 カスタムパスを実装するためには`wasm::Pass`抽象クラスを継承します。
 
-#### main.cpp [(189行目-210行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/main.cpp#L189-L210)
+#### main.cpp [(193行目-214行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L193-L214)
 
 ```cpp
 // カスタムパスクラス
@@ -254,7 +254,7 @@ public:
 
 このパスを実行するには、`wasm::PassRunner`にこのクラスを登録します。
 
-#### main.cpp [(223行目-226行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/main.cpp#L223-L226)
+#### main.cpp [(223行目-230行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L223-L230)
 
 ```cpp
 // PassRunnerにカスタムパスを登録する
@@ -270,7 +270,7 @@ pass_runner.run();
 
 モジュールに含まれる定数命令の数を数えるには式木訪問器(Visitor)を作成するのがもっとも簡単です。
 
-#### main.cpp [(6行目-187行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/d1df8c31e02fa5242760cad0ab32176ca32b7cf9/main.cpp#L6-L187)
+#### main.cpp [(6行目-191行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L6-L191)
 
 ```cpp
 struct CountingVisitor
@@ -290,7 +290,7 @@ struct CountingVisitor
 
 例として、定数命令(`i32.const`命令など)と条件分岐命令(`if`命令)の`visit`関数を挙げます。
 
-#### 定数命令の`visit`関数 - main.cpp [(129行目-131行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/master/main.cpp#L129-L131)
+#### 定数命令の`visit`関数 - main.cpp [(129行目-131行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L129-L131)
 
 ```cpp
 // 定数命令のvisit関数
@@ -303,7 +303,7 @@ int visitConst(wasm::Const *curr) {
 
 このノードは定数命令なので常に`1`を返します。
 
-#### 条件分岐命令の`visit`関数 - main.cpp [(17行目-27行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/master/main.cpp#L17-L27)
+#### 条件分岐命令の`visit`関数 - main.cpp [(17行目-27行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L17-L27)
 
 ```cpp
 // 条件分岐命令のvisit関数
@@ -337,7 +337,7 @@ int visitIf(wasm::If *curr) {
 
 最後に作成したVisitorを呼び出す必要があります。
 
-#### main.cpp [(192行目-205行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/master/main.cpp#L192-L205)
+#### main.cpp [(196行目-209行目)](https://github.com/NagayamaRyoga/binaryen-const-counter/blob/87c23aacf472c5711377a84ea88dc78addf0ffbc/main.cpp#L196-L209)
 
 ```cpp
 // パスが実行されるときに呼び出されるメンバ関数
@@ -349,7 +349,7 @@ void run(wasm::PassRunner *pass_runner, wasm::Module *module) override {
     int count = 0;
 
     for (const auto &function : module->functions) {
-        count += visitor.visit(function->body);
+        count += visitor.visitFunction(function.get());
     }
 
     // 出力する
