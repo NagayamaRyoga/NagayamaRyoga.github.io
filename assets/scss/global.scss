@@ -82,6 +82,12 @@ hr {
   border: none;
 }
 
+blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: solid 4px $blue;
+}
+
 .button {
   display: inline-block;
   padding: 0.2em 2em;
