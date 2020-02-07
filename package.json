@@ -12,7 +12,7 @@
     "lintfix": "npm run lintfix:js && npm run lint:text",
     "build:posts": "processmd \"./posts/**/*.md\" --outputDir \"./static/posts\" --summaryOutput \"./static/posts/summary.json\" --preview 140 --previewDelimiter \"。\"",
     "build:gh-pages": "npm run build:posts && cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy:gh-pages": "npm run build:gh-pages && gh-pages -b master -t -d dist"
+    "deploy:gh-pages": "npm run build:gh-pages && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "husky": {
     "hooks": {
@@ -50,6 +50,7 @@
     "processmd": "^4.5.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
+    "push-dir": "^0.4.1",
     "sass-loader": "^7.3.1",
     "textlint": "^11.6.3",
     "textlint-filter-rule-comments": "^1.2.2",
