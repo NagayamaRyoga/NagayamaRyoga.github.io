@@ -41,8 +41,8 @@ main.profile
     |  Skills
   ul
     li LLVM
+    li CRuby
     li Web frontend
-    li iOS application
     li Digital watermarking
 </template>
 
