@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "nuxt",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:text": "textlint ./posts",
+    "lint:text": "textlint --cache ./posts",
     "lint": "npm run lint:js && npm run lint:text",
     "lintfix:js": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "npm run lintfix:js && npm run lint:text",
     "build:posts": "processmd \"./posts/**/*.md\" --outputDir \"./static/posts\" --summaryOutput \"./static/posts/summary.json\" --preview 140 --previewDelimiter \"。\"",
     "build:gh-pages": "npm run build:posts && cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy:gh-pages": "npm run build:gh-pages && push-dir --dir=dist --branch=master --cleanup"
+    "deploy:gh-pages": "npm run build:gh-pages && push-dir --dir=dist --branch=master --cleanup",
+		"test": "npm run lint"
   },
   "husky": {
     "hooks": {
