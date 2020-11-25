@@ -2,7 +2,7 @@ import { fileMap } from '~/static/posts/summary.json';
 
 export async function getSummary() {
   return Object.values(fileMap)
-    .map(x => {
+    .map((x) => {
       const id = x.base.replace(/\.json$/, '');
 
       return {

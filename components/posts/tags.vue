@@ -4,6 +4,22 @@ ul.tags
     Tag(:tag='tag')
 </template>
 
+<script>
+import Tag from '~/components/posts/tag';
+
+export default {
+  components: {
+    Tag,
+  },
+  props: {
+    tags: {
+      type: Array,
+      required: true,
+    },
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import '~/assets/scss/theme.scss';
 
@@ -27,19 +43,3 @@ ul.tags
   }
 }
 </style>
-
-<script>
-import Tag from '~/components/posts/tag';
-
-export default {
-  components: {
-    Tag,
-  },
-  props: {
-    tags: {
-      type: Array,
-      required: true,
-    },
-  },
-};
-</script>

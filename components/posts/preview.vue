@@ -6,20 +6,6 @@ Article(:article='article')
     nuxt-link.button(:to='article.uri') 続きを読む
 </template>
 
-<style lang="scss" scoped>
-@import '~/assets/scss/theme.scss';
-
-.content {
-  &::after {
-    content: ' ……';
-  }
-}
-
-.footer {
-  text-align: center;
-}
-</style>
-
 <script>
 import Article from '~/components/posts/article';
 
@@ -35,3 +21,17 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import '~/assets/scss/theme.scss';
+
+.content {
+  &::after {
+    content: ' ……';
+  }
+}
+
+.footer {
+  text-align: center;
+}
+</style>

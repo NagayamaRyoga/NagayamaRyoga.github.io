@@ -46,6 +46,39 @@ main.profile
     li Digital watermarking
 </template>
 
+<script>
+import LinkButton from '~/components/link-button';
+
+const mailTo = 'bWFpbHRv';
+const mailAddress = 'bmFnYXlhbWExNUBzZWMuaXMua2l0LmFjLmpw';
+
+export default {
+  components: {
+    LinkButton,
+  },
+
+  data() {
+    return {
+      mailTo: '',
+      mailAddress: '',
+    };
+  },
+
+  computed: {
+    mailLink() {
+      return `${this.mailTo}: ${this.mailAddress}`;
+    },
+  },
+
+  mounted() {
+    if (process.client) {
+      this.mailTo = window.atob(mailTo);
+      this.mailAddress = window.atob(mailAddress);
+    }
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import '~/assets/scss/theme.scss';
 
@@ -87,36 +120,3 @@ ul {
   font-size: 2em;
 }
 </style>
-
-<script>
-import LinkButton from '~/components/link-button';
-
-const mailTo = 'bWFpbHRv';
-const mailAddress = 'bmFnYXlhbWExNUBzZWMuaXMua2l0LmFjLmpw';
-
-export default {
-  components: {
-    LinkButton,
-  },
-
-  data() {
-    return {
-      mailTo: '',
-      mailAddress: '',
-    };
-  },
-
-  computed: {
-    mailLink() {
-      return `${this.mailTo}: ${this.mailAddress}`;
-    },
-  },
-
-  mounted() {
-    if (process.client) {
-      this.mailTo = window.atob(mailTo);
-      this.mailAddress = window.atob(mailAddress);
-    }
-  },
-};
-</script>

@@ -12,16 +12,10 @@ module.exports = {
     'plugin:vue/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: [
-    'vue',
-  ],
+  plugins: ['vue'],
   rules: {
-    'semi': [2, 'always'],
-    'comma-dangle': ['error', 'always-multiline'],
-    'quotes': ['error', 'single', {'avoidEscape': true}],
-    'prettier/prettier': [
-      'error',
-      {trailingComma: 'es5', singleQuote: true}
-    ],
+    semi: [2, 'always'],
+    quotes: ['error', 'single', { avoidEscape: true }],
+    'prettier/prettier': ['error', { trailingComma: 'es5', singleQuote: true }],
   },
 };

@@ -23,7 +23,7 @@ tags:
 
 ### Pandoc
 
-[Pandoc](https://pandoc.org/)はWord、LaTeX、Markdownなどの異なる文書形式間の変換を行うためのアプリケーションです。
+[Pandoc](https://pandoc.org/)はWord、LaTeX、Markdownなどの異なる文書形式間を変換するためのアプリケーションです。
 上記のプロジェクトではこれに加え、ラベルなどの参照のためにPandocのプラグイン、[pandoc-crossref](http://lierdakil.github.io/pandoc-crossref/)を併用しています。
 
 ### pLaTeX

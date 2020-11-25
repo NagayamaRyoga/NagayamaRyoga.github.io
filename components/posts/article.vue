@@ -9,6 +9,28 @@ article
   slot
 </template>
 
+<script>
+import Tags from '~/components/posts/tags';
+
+export default {
+  components: {
+    Tags,
+  },
+  props: {
+    article: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    date() {
+      const date = new Date(this.article.publishedAt);
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    },
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import '~/assets/scss/theme.scss';
 
@@ -42,25 +64,3 @@ article {
   }
 }
 </style>
-
-<script>
-import Tags from '~/components/posts/tags';
-
-export default {
-  components: {
-    Tags,
-  },
-  props: {
-    article: {
-      type: Object,
-      required: true,
-    },
-  },
-  computed: {
-    date() {
-      const date = new Date(this.article.publishedAt);
-      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-    },
-  },
-};
-</script>

@@ -9,12 +9,6 @@
         TwitterShareButton
 </template>
 
-<style lang="scss" scoped>
-.content {
-  margin: 3em 0em;
-}
-</style>
-
 <script>
 import Header from '~/components/posts/header';
 import Article from '~/components/posts/article';
@@ -72,3 +66,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.content {
+  margin: 3em 0em;
+}
+</style>

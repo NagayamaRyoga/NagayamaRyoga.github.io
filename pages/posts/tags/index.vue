@@ -5,18 +5,6 @@
     Tags(:tags='tags')
 </template>
 
-<style lang="scss" scoped>
-@import '~/assets/scss/theme.scss';
-
-.tags {
-  margin: 2em 0em;
-  padding: 1em 2em;
-  background: $base;
-  font-weight: 300;
-  filter: drop-shadow(6px 6px 0px $shadow);
-}
-</style>
-
 <script>
 import Header from '~/components/posts/header';
 import Tags from '~/components/posts/tags';
@@ -70,3 +58,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import '~/assets/scss/theme.scss';
+
+.tags {
+  margin: 2em 0em;
+  padding: 1em 2em;
+  background: $base;
+  font-weight: 300;
+  filter: drop-shadow(6px 6px 0px $shadow);
+}
+</style>

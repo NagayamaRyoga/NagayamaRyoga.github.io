@@ -9,14 +9,14 @@ const routerBase =
       }
     : {};
 
-const postRoutes = sourceFileArray.map(x =>
+const postRoutes = sourceFileArray.map((x) =>
   x.replace(/^\.\/posts\/(.+)\.md$/, '/posts/$1')
 );
 
 const tagRoutes = Object.values(fileMap)
   .reduce((a, b) => [...a, ...b.tags], [])
   .filter((x, i, a) => a.slice(0, i).indexOf(x) === -1)
-  .map(x => `/posts/tags/${x}`);
+  .map((x) => `/posts/tags/${x}`);
 
 const dynamicRoutes = [...postRoutes, ...tagRoutes];
 

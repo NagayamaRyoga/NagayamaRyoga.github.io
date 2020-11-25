@@ -3,6 +3,31 @@ Link(:title='title' :to='to')
   font-awesome-icon(:icon='icon')
 </template>
 
+<script>
+import Link from '~/components/better-link';
+
+export default {
+  components: {
+    Link,
+  },
+  props: {
+    to: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    icon: {
+      type: [Object, Array, String],
+      required: true,
+    },
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import '~/assets/scss/theme.scss';
 
@@ -31,28 +56,3 @@ a {
   }
 }
 </style>
-
-<script>
-import Link from '~/components/better-link';
-
-export default {
-  components: {
-    Link,
-  },
-  props: {
-    to: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: false,
-      default: '',
-    },
-    icon: {
-      type: [Object, Array, String],
-      required: true,
-    },
-  },
-};
-</script>
