@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/NagayamaRyoga/NagayamaRyoga.github.io/issues"
   },
-  "homepage": "https://nagayamaryoga.github.io"
+  "homepage": "https://nagayamaryoga.github.io",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
 }
