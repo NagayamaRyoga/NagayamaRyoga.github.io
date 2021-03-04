@@ -1,0 +1,18 @@
+{
+  "name": "nagayamaryoga.github.io",
+  "version": "1.0.0",
+  "description": "NagayamaRyoga's web page",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NagayamaRyoga/NagayamaRyoga.github.io"
+  },
+  "author": "NagayamaRyoga <nagayama15@sec.is.kit.ac.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NagayamaRyoga/NagayamaRyoga.github.io/issues"
+  },
+  "homepage": "https://nagayamaryoga.github.io"
+}
