@@ -93,6 +93,8 @@ hr {
 .links__item:focus {
   background-color: var(--accent-color);
   transform: rotate(-1turn);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .section__title {

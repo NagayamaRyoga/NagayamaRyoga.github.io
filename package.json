@@ -2,6 +2,7 @@
   "name": "nagayamaryoga.github.io",
   "version": "1.0.0",
   "description": "NagayamaRyoga's web page",
+  "private": true,
   "scripts": {
     "start": "http-server -c-1 ./docs",
     "fmt": "prettier --write ./docs",
