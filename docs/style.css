@@ -25,6 +25,7 @@ body {
 hr {
   margin-block-start: 1.5rem;
   margin-block-end: 1.5rem;
+  border: none;
   border-top: solid 1px var(--accent-color);
 }
 
