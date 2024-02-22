@@ -19,8 +19,8 @@
   },
   "homepage": "https://nagayamaryoga.github.io",
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.2",
+    "@evilmartians/lefthook": "^1.6.1",
     "http-server": "^14.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^3.2.5"
   }
 }
