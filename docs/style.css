@@ -32,7 +32,7 @@ hr {
 .container {
   margin: 1rem auto;
   padding: 1.5rem 1rem;
-  width: 20rem;
+  width: 24rem;
   border-radius: 1rem;
   background-color: var(--base-color);
   font-family: var(--sans-font-family);
